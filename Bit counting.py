@@ -17,6 +17,10 @@ def numSum(n):
     #print('nSum: ' + str(nSum)) #debug purposes
     return nSum
 countBits(1234)
+
+'''
+Better Solutions in Top Solutions of this Kata
+'''
 def  countSetBits(n):
     count = 0
     while (n):
