@@ -1,4 +1,7 @@
 '''
+
+                                                WORK IN PROGRESS, TRYING TO LEARN NEW STUFF FOR THIS
+
 #################################
 ###### P5 CASE DOESN'T WORK #####
 #################################
