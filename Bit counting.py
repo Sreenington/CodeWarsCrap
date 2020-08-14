@@ -20,6 +20,7 @@ countBits(1234)
 
 '''
 Better Solutions in Top Solutions of this Kata
+I didn't come up with these
 '''
 def  countSetBits(n):
     count = 0
