@@ -1,6 +1,6 @@
 '''
 
-                                                WORK IN PROGRESS, TRYING TO LEARN NEW STUFF FOR THIS
+                                                SOLVED, SCROLL BELOW
 
 #################################
 ###### P5 CASE DOESN'T WORK #####
@@ -31,26 +31,36 @@ def validBraces(string):
 def get_key(val, dict):
     for key, value in dict.items():
         if val == value:
-            return key'''
+            return key    '''
 
 def validBraces(string):
     braces = {
-        '(' : ')',
-        '{' : '}',
-        '[' : '}'
+        '(': ')',
+        '{': '}',
+        '[': ']'
     }
-    get_key = lambda d, v: [key for key,value in d.items() if v == value]
-    openBraces = ['(', '{', '{']
-    closeBraces = [')', '}', '}']
+
+    check = []
+    for i in string:
+        if i in braces:
+            check.append(braces[i])  # appends closing brackets in order they are supposed to appear
+            continue
+        if i == check.pop():  # checks if closing brackets appears in the order specified in the list
+            continue
+        return print(False)
+    print(check)
+    return print(True)
 
 
-p1 = "()" # True check
-p2 =  "[]{}" # True check
-p3 = "([}{])" # False check
-p4 = "[(])" # False check
-p5 = "(}" # False
-p6 = "(({{[[]]}}))" # True check
-validBraces(p5)
+# Test values
+p1 = "()"  # True passes
+p2 = "[]{}"  # True passes
+p3 = "([}{])"  # False passes
+p4 = "[(])"  # False passes
+p5 = "(}"  # False passes
+p6 = "(({{[[]]}}))"  # True passes
+p7 = "(((({{"  # False fails
+validBraces(p6)
 
 ############### REDUNDANT ###########33
 '''if braces.get(i) == string[-(string.index(i) + 1)] or braces.get(i) == string[(string.index(i) + 1)]:
