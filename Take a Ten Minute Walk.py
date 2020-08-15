@@ -2,8 +2,7 @@ from collections import Counter
 
 def is_valid_walk(walk):
     dir_count = (Counter(walk))
-    dir_val_x = {'n': 1, 's': -1}
-    dir_val_y = {'e': 1, 'w': -1}
+    dir_val_x, dir_val_y = {'n': 1, 's': -1}, {'e': 1, 'w': -1}
     dx, dy = 0, 0
     for i in dir_count:
         if i in dir_val_x:
