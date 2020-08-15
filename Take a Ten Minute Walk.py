@@ -1,6 +1,5 @@
 from collections import Counter
 
-
 def is_valid_walk(walk):
     dir_count = (Counter(walk))
     dir_val_x = {'n': 1, 's': -1}
