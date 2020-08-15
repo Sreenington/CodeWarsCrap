@@ -1,9 +1,45 @@
+def validBraces(string):
+    braces = {
+        '(': ')',
+        '{': '}',
+        '[': ']'
+    }
+
+    check = []
+    for i in string:
+        if i in braces:
+            check.append(braces[i])  # appends closing brackets in order they are supposed to appear
+            continue
+        print(check)
+        try:
+            if i == check.pop():  # checks if closing brackets appears in the order specified in the list
+                continue
+            return print(False)
+        except IndexError:
+            pass  # p8 case returns an index error cause it starts with a closing bracket
+
+    if (len(check)):  # For p7 Case
+        return print(False)
+    return print(True)
+
+
+# Test values
+p1 = "()"  # True passes
+p2 = "[]{}"  # True passes
+p3 = "([}{])"  # False passes
+p4 = "[(])"  # False passes
+p5 = "(}"  # False passes
+p6 = "(({{[[]]}}))"  # True passes
+p7 = "(((({{"  # False passes
+p8 = ")(}{]["
+validBraces(p8)
+
+############### REDUNDANT ###########33
+
 '''
 
-                                                WORK IN PROGRESS, DIDNT SOLVE YET
-
 #################################
-###### P5 CASE DOESN'T WORK #####
+###### Previous attempts    #####
 #################################
 
 def validBraces(string):
@@ -31,39 +67,10 @@ def validBraces(string):
 def get_key(val, dict):
     for key, value in dict.items():
         if val == value:
-            return key    '''
-
-def validBraces(string):
-    braces = {
-        '(': ')',
-        '{': '}',
-        '[': ']'
-    }
-
-    check = []
-    for i in string:
-        if i in braces:
-            check.append(braces[i])  # appends closing brackets in order they are supposed to appear
-            continue
-        if i == check.pop():  # checks if closing brackets appears in the order specified in the list
-            continue
-        return print(False)
-    print(check)
-    return print(True)
+            return key    
 
 
-# Test values
-p1 = "()"  # True passes
-p2 = "[]{}"  # True passes
-p3 = "([}{])"  # False passes
-p4 = "[(])"  # False passes
-p5 = "(}"  # False passes
-p6 = "(({{[[]]}}))"  # True passes
-p7 = "(((({{"  # False fails
-validBraces(p6)
-
-############### REDUNDANT ###########33
-'''if braces.get(i) == string[-(string.index(i) + 1)] or braces.get(i) == string[(string.index(i) + 1)]:
+if braces.get(i) == string[-(string.index(i) + 1)] or braces.get(i) == string[(string.index(i) + 1)]:
     return print(True)
 else:
     return print(False)'''
