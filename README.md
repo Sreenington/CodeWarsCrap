@@ -7,4 +7,4 @@ Noob programmer
 
 !! NOTE !!
 
-For all the solutions, the code returns print statements because I want to see what it returns. For submission, simply remove the print statements.
+For most of the solutions, the code returns print statements because I want to see what it returns. For submission, simply remove the print statements.
