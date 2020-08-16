@@ -1,4 +1,6 @@
 p = "is2 Thi1s T4est 3a"
+
+
 def order(phrase):
     arr = phrase.split()
     arr.sort(key=lambda p: check_int(p))
