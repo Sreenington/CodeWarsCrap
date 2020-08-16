@@ -38,6 +38,6 @@ def fibonacci(n):
     fibo_cache[n] = val
     return val
 
-n1 = 50 result is 12586269025 and took >5min for the code wars sample code
+n1 = 50 result is 12586269025 and took >5min with the code wars sample code
 n1 = 100 for this function took 0.0006 seconds in average, same as the answer above.
 '''
