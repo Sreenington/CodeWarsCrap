@@ -6,7 +6,7 @@ def done_or_not(board):  # board[i][j]
             count.append(board[j][i])
             continue
         if sum(count) != 45:
-            return 'Try again!'
+            return 'Try again!!'
     return 'Finished!'
 
 
